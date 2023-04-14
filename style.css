@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --ff-heading: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin', sans-serif;
+
+    --bg-primary: #8E9AAF;
+    --bg-secondary: #EFF1FF;
+    --bg-tertiary: #CBC0D3;
+    --bg-quaternary: #FEEAFA;
+
+    --fc-primary: #FFFFFF;
+    --fc-secondary: #23053A;
+    --fc-tertiary: #4A4E69;
+
+
+    font-size: 62.5%;
+    --fs-header: 4rem;
+    --fs-body: 2rem;
+}
+
+.page {
+    max-width: 38.4rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .page {
+        max-width: 128rem;
+    }
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+header {    
+    background-color: var(--bg-primary);
+    text-align: center;
+    width: 100%;
+    height: 27.9rem;
+    padding: 3.2rem 0 2.9rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header h1 {
+    font-family: var(--ff-heading);
+    color: var(--fc-primary);   
+
+    font-size: var(--fs-header);
+    font-weight: 400;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;         
+    
+}
+
+header .logo {
+    width: 13.7rem;
+    height: 13.7rem;
+}
+
+header .title-container {
+    background-color: var(--bg-tertiary);
+    width: 100%;
+    height: 4.9rem;
+    padding: .8rem 0;   
+
+}
+
+main {
+    display: grid;
+    gap: 3.6rem;
+    margin-bottom: 6rem;
+    
+}
+
+body {
+    background-color: var(--bg-secondary);  
+           
+}
+
+.text {
+    font-family: var(--ff-texting);
+    color: var(--fc-secondary);
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.4rem 3.6rem 0;
+    margin-bottom: 6.3rem;
+  }
+
+body h2 {
+    font-family: var(--ff-heading);
+    color: var(--fc-tertiary);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    line-height: 3.4rem;
+    
+}
+
+.card {
+    position: relative; 
+          
+}
+
+.card h2 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+}
+
+.card h2 span {
+    border-radius: 2rem;
+    background-color: var(--bg-quaternary);
+    padding: 0 2.3rem;
+    
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+
+}
+
+main .card {
+    animation-name: downtop;
+    animation-duration: 900ms;
+    animation-fill-mode: forwards;
+    
+}
+
+main .card h2 span {
+    animation-name: topdown;
+    animation-duration: 900ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
